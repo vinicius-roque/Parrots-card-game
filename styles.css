@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #EEF9BF;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.top {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top h1 {
+    padding: 50px 0 20px 0;
+    color: #75B79E;
+    text-align: center;
+    font-size: 56px;
+    font-weight: bold;
+    line-height: 66px;
+}
+
+.game {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #A7E9AF;
+    width: 117px;
+    height: 146px;
+    border-radius: 5px;
+    border: solid 1px #99CEA8;
+    position: relative;
+    margin: 15px;
+    transition: transform 1s linear;
+}
+
+.staticFace, .gifFace {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+.staticFace img, .gifFace img {
+    height: 120px;
+    width: 90px;
+    object-fit: contain;
+    transition-delay: 500ms;
+}
+
+.staticFace img {
+    opacity: 1;
+}
+
+.gifFace img {
+    opacity: 0;
+}
+
+.card.turned {
+    transform: rotateY(180deg);
+}
+
+.staticFace.turned img {
+    opacity: 0;
+}
+
+.gifFace.turned img {
+    opacity: 1;
+}
